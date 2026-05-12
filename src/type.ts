@@ -16,3 +16,9 @@ export interface Nav {
     text: string,
     url:string
 }
+
+export interface Vehicule{
+    nom: string,
+    marque:string,
+
+}

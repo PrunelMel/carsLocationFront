@@ -3,6 +3,7 @@ import App from "./App";
 import Home from "./pages/Home/Home";
 import CarListing from "./components/CarListing";
 import LoginPage from "./pages/Forms/LoginPage";
+import Board from "./pages/Dashboard/admin/Board";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     {
         path:"login",
         element: <LoginPage />
+    },
+    {
+        path:"dash",
+        element: <Board />
     }
     
 ]);
