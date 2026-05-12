@@ -1,4 +1,11 @@
-const NAV = ["Home", "About", "Services", "Cars", "Contacts"];
+import type { Nav } from "../../type";
+const NAV:Nav[] = [
+ { text:"Home", url:"/"},
+  {text:"About", url:"/about"},
+  {text:"Services", url:"/services"},
+  {text:"Cars", url:"/cars"},
+  {text:"Contacts", url:"/"}
+];
 
 const NavBar = () => {
   return (
@@ -10,11 +17,11 @@ const NavBar = () => {
         <nav className="flex items-center gap-8">
           {NAV.map((l, i) => (
             <a
-              key={l}
-              href="#"
-              className={`nav-link text-sm font-medium no-underline transition-colors ${l === "Home" ? "text-blue-600" : "text-gray-600 hover:text-blue-600"}`}
+              key={l.text}
+              href={l.url}
+              className={`nav-link text-sm font-medium no-underline transition-colors ${l.text === "Home" ? "text-blue-600" : "text-gray-600 hover:text-blue-600"}`}
             >
-              {l}
+              {l.text}
             </a>
           ))}
         </nav>
