@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Nav } from "../../type";
 const NAV:Nav[] = [
  { text:"Home", url:"/"},
@@ -41,11 +42,12 @@ const NavBar = () => {
             Eng
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <button
+          <Link
+            to="/login"
             className="signup-btn bg-blue-600 text-white rounded-full px-5 py-2 text-sm font-semibold transition-shadow"
           >
             Sign Up
-          </button>
+          </Link>
         </div>
     </header>
  
